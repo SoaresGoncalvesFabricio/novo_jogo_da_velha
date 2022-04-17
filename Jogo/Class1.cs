@@ -64,24 +64,14 @@
         {
             if (Quantidadepreenchida < 5)
                 return;
+            if (Vitoriahorizontal()||Vitoriavertical()||Vitoriadiagonal())
+            {
+                Console.WriteLine($"Parabéns, o jogador {Vez} venceu!");
+                Fimjogo = true;
+            }
             if (Quantidadepreenchida == 9)
             {
                 Console.WriteLine("Empate.");
-                Fimjogo = true;
-            }
-            if (Vitoriahorizontal())
-            {
-                Console.WriteLine($"Vitoria de {Vez}.");
-                Fimjogo = true;
-            }
-            if (Vitoriavertical())
-            {
-                Console.WriteLine($"Vitoria de {Vez}.");
-                Fimjogo = true;
-            }
-            if (Vitoriadiagonal())
-            {
-                Console.WriteLine($"Vitoria de {Vez}.");
                 Fimjogo = true;
             }
         }
@@ -123,4 +113,3 @@
         }
     }
 }
-
